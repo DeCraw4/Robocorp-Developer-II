@@ -30,7 +30,7 @@ def order_robots_from_RobotSpareBin():
 
 
 def open_robot_order_website():
-    # opens robot order website
+    """opens robot order website"""
     browser.configure(slowmo=200)
     page = browser.page()
     browser.goto("https://robotsparebinindustries.com/#/robot-order")
@@ -52,7 +52,7 @@ def download_csv_file():
 
 
 def read_csv_file():
-    # reads content of csv file without editing
+    """ reads content of csv file without editing """
     data = Tables().read_table_from_csv("output/orders.csv")
     return data
 
@@ -115,7 +115,7 @@ def handle_submission(page):
 
 def store_receipt_as_pdf(page, order_number):
     """ 
-    stores recept as PDF outside of core bot functionality 
+    stores receipt as PDF outside of core functionality 
     and creates path for HTML to PDF conversion
     """
     page = browser.page()
